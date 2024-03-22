@@ -14,7 +14,7 @@ public class CalculatorApplication {
 	}
 
 	@RestController
-	public class CalculatorController {
+	public static class CalculatorController {
 
 		@GetMapping("/calculator")
 		public String welcome() {
@@ -22,22 +22,22 @@ public class CalculatorApplication {
 		}
 
 		@GetMapping("/calculator/plus")
-		public String add(@RequestParam int num1, @RequestParam int num2) {
+		public String add(@RequestParam double num1, @RequestParam double num2) {
 			return num1 + " + " + num2 + " = " + (num1 + num2);
 		}
 
 		@GetMapping("/calculator/minus")
-		public String subtract(@RequestParam int num1, @RequestParam int num2) {
+		public String subtract(@RequestParam double num1, @RequestParam double num2) {
 			return num1 + " - " + num2 + " = " + (num1 - num2);
 		}
 
 		@GetMapping("/calculator/multiply")
-		public String multiply(@RequestParam int num1, @RequestParam int num2) {
+		public String multiply(@RequestParam double num1, @RequestParam double num2) {
 			return num1 + " * " + num2 + " = " + (num1 * num2);
 		}
 
 		@GetMapping("/calculator/divide")
-		public String divide(@RequestParam int num1, @RequestParam int num2) {
+		public String divide(@RequestParam double num1, @RequestParam double num2) {
 			if (num2 == 0) {
 				return "Ошибка: Деление на ноль недопустимо";
 			} else {
