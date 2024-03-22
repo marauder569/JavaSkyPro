@@ -18,7 +18,7 @@ public class CalculatorApplication {
 
 		@GetMapping("/calculator")
 		public String welcome() {
-			return "Добро пожаловать в калькулятор";
+			return "Добро пожаловать в калькулятор!";
 		}
 
 		@GetMapping("/calculator/plus")
